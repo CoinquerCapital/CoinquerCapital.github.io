@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coinquer Capital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: 'Rajdhani', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #d4af37;
+    }
+    p, li {
+      font-family: 'Space Mono', monospace;
+    }
+    .tagline {
+      font-family: 'Share Tech Mono', monospace;
+      color: #d4af37;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out both;
+    }
+    .slide-up {
+      animation: slideUp 1s ease-out both;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn-gold {
+      background-color: #d4af37;
+      color: #121212;
+      font-weight: 600;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 8px #d4af37cc;
+      border-radius: 1rem;
+      padding: 0.75rem 1.5rem;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-gold:hover {
+      background-color: #b9962f;
+      color: white;
+      box-shadow: 0 0 15px 3px #d4af37;
+    }
+    .card {
+      background-color: #000;
+      border-radius: 1rem;
+      box-shadow: 0 0 6px #222;
+      padding: 1.5rem;
+      transition: box-shadow 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 0 15px 3px #d4af37cc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <section class="bg-[#121212] text-white py-20 px-6">
+    <div class="max-w-6xl mx-auto text-center fade-in">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Coinquer Capital</h1>
+      <p class="text-xl md:text-2xl slide-up tagline">Conquer Tomorrow's Wealth — Today</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-16 px-6" style="background-color: #1e1e1e;">
+    <div class="max-w-4xl mx-auto slide-up">
+      <h2 class="text-3xl font-bold mb-6">About Us</h2>
+      <p class="text-lg leading-relaxed text-gray-300">
+        Coinquer Capital is a future-focused investment firm specializing in data-driven strategies, algorithmic trading, and digital asset management. We merge traditional finance with next-gen technology to create lasting value.
+      </p>
+    </div>
+  </section>
+
+  <!-- Investment Philosophy -->
+  <section class="py-16 px-6 bg-[#121212]">
+    <div class="max-w-4xl mx-auto fade-in">
+      <h2 class="text-3xl font-bold mb-6">Our Investment Philosophy</h2>
+      <ul class="list-disc pl-6 space-y-2 text-lg text-gray-300">
+        <li>Evidence-based, algorithmically enhanced decision making</li>
+        <li>Focus on long-term value creation and risk-adjusted returns</li>
+        <li>Transparent, client-first relationships</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-16 px-6" style="background-color: #1e1e1e;">
+    <div class="max-w-6xl mx-auto fade-in">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card slide-up">
+          <h3 class="text-xl font-bold mb-2">Asset Management</h3>
+          <p class="text-gray-300">Managed portfolios built on robust quantitative models and market insight.</p>
+        </div>
+        <div class="card slide-up">
+          <h3 class="text-xl font-bold mb-2">Advisory Services</h3>
+          <p class="text-gray-300">Personalized financial strategy, risk analysis, and growth consulting.</p>
+        </div>
+        <div class="card slide-up">
+          <h3 class="text-xl font-bold mb-2">Digital Assets</h3>
+          <p class="text-gray-300">Expertise in crypto, tokenomics, and blockchain-powered investment solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-16 px-6 bg-[#121212] text-white text-center">
+    <div class="max-w-3xl mx-auto slide-up">
+      <h2 class="text-3xl font-bold mb-4">Partner with Coinquer</h2>
+      <p class="mb-6 text-lg text-gray-300">Ready to elevate your investment journey? Let’s talk.</p>
+      <a href="mailto:info@coinquer-capital.com" class="btn-gold">Contact Us</a>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-sm text-gray-500 bg-[#121212] fade-in">
+    © 2025 Coinquer Capital. All rights reserved.
+  </footer>
+</body>
+</html>
