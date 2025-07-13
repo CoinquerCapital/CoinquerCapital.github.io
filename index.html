@@ -4,134 +4,182 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Coinquer Capital</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      background-color: #121212;
-      color: #f0f0f0;
-      font-family: 'Rajdhani', sans-serif;
+    html, body {
+      margin: 0; padding: 0; height: 100%; overflow: hidden;
+      background: transparent; color: #000;
+      font-family: 'Space Grotesk', sans-serif;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
     }
-    h1, h2, h3 {
-      font-family: 'Orbitron', sans-serif;
-      color: #f7bb39;
+    canvas {
+      position: fixed; top: 0; left: 0;
+      width: 100vw; height: 100vh; z-index: -1;
     }
-    p, li {
-      font-family: 'Space Mono', monospace;
+    .content {
+      text-align: center; z-index: 0;
+      background: rgba(255,255,255,0.9);
+      padding: 1rem; border-radius: 8px;
     }
-    .tagline {
-      font-family: 'Share Tech Mono', monospace;
-      color: #f7bb39;
-      font-weight: 300;
-      letter-spacing: 0.05em;
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3.5rem; font-weight: 700;
+      margin: 0; letter-spacing: 2px;
+      text-shadow: 0 0 20px rgba(0,0,0,0.3), 0 0 10px rgba(0,0,0,0.2);
     }
-    .fade-in {
-      animation: fadeIn 1.5s ease-in-out both;
+    .slogan {
+      font-size: 1.2rem; margin-top: 0.5rem;
     }
-    .slide-up {
-      animation: slideUp 1s ease-out both;
+    footer {
+      position: fixed; bottom: 20px;
+      font-size: 0.9rem; color: #444;
+      background: rgba(255,255,255,0.9);
+      padding: 0.5rem 1rem; border-radius: 6px;
+      z-index: 0; text-align: center; line-height: 1.4;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .btn-gold {
-      background-color: #f7bb39;
-      color: #121212;
-      font-weight: 600;
-      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 8px #f7bb39cc;
-      border-radius: 1rem;
-      padding: 0.75rem 1.5rem;
-      display: inline-block;
-      text-decoration: none;
-    }
-    .btn-gold:hover {
-      background-color: #c9a92e;
-      color: white;
-      box-shadow: 0 0 15px 3px #f7bb39;
-    }
-    .card {
-      background-color: #000;
-      border-radius: 1rem;
-      box-shadow: 0 0 6px #222;
-      padding: 1.5rem;
-      transition: box-shadow 0.3s ease;
-    }
-    .card:hover {
-      box-shadow: 0 0 15px 3px #f7bb39cc;
+    footer a {
+      color: #444; text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <!-- Hero -->
-  <section class="bg-[#121212] text-white py-20 px-6">
-    <div class="max-w-6xl mx-auto text-center fade-in flex items-center justify-center space-x-6">
-      <img src="favicon.ico" alt="Coinquer Capital Logo" class="w-32 h-32 object-contain" />
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Coinquer Capital</h1>
-    </div>
-    <p class="text-xl md:text-2xl slide-up tagline text-center mt-4">Conquer Tomorrow's Wealth — Today</p>
-  </section>
-
-  <!-- About -->
-  <section class="py-16 px-6" style="background-color: #1e1e1e;">
-    <div class="max-w-4xl mx-auto slide-up">
-      <h2 class="text-3xl font-bold mb-6">About Us</h2>
-      <p class="text-lg leading-relaxed text-gray-300">
-        Coinquer Capital is a future-focused investment firm specializing in data-driven strategies, algorithmic trading, and digital asset management. We merge traditional finance with next-gen technology to create lasting value.
-      </p>
-    </div>
-  </section>
-
-  <!-- Investment Philosophy -->
-  <section class="py-16 px-6 bg-[#121212]">
-    <div class="max-w-4xl mx-auto fade-in">
-      <h2 class="text-3xl font-bold mb-6">Our Investment Philosophy</h2>
-      <ul class="list-disc pl-6 space-y-2 text-lg text-gray-300">
-        <li>Evidence-based, algorithmically enhanced decision making</li>
-        <li>Focus on long-term value creation and risk-adjusted returns</li>
-        <li>Transparent, client-first relationships</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="py-16 px-6" style="background-color: #1e1e1e;">
-    <div class="max-w-6xl mx-auto fade-in">
-      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="card slide-up">
-          <h3 class="text-xl font-bold mb-2">Asset Management</h3>
-          <p class="text-gray-300">Managed portfolios built on robust quantitative models and market insight.</p>
-        </div>
-        <div class="card slide-up">
-          <h3 class="text-xl font-bold mb-2">Advisory Services</h3>
-          <p class="text-gray-300">Personalized financial strategy, risk analysis, and growth consulting.</p>
-        </div>
-        <div class="card slide-up">
-          <h3 class="text-xl font-bold mb-2">Digital Assets</h3>
-          <p class="text-gray-300">Expertise in crypto, tokenomics, and blockchain-powered investment solutions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="py-16 px-6 bg-[#121212] text-white text-center">
-    <div class="max-w-3xl mx-auto slide-up">
-      <h2 class="text-3xl font-bold mb-4">Partner with Coinquer</h2>
-      <p class="mb-6 text-lg text-gray-300">Ready to elevate your investment journey? Let’s talk.</p>
-      <a href="mailto:info@coinquer-capital.com" class="btn-gold">Contact Us</a>
-    </div>
-  </section>
-
-  <footer class="py-6 text-center text-sm text-gray-500 bg-[#121212] fade-in">
-    © 2025 Coinquer Capital. All rights reserved.
+  <canvas id="background"></canvas>
+  <div class="content">
+    <h1>Coinquer Capital</h1>
+    <p class="slogan">Conquer the Markets. Grow Your Wealth.</p>
+  </div>
+  <footer>
+    <div>Need consultation?</div>
+    <div><a href="mailto:info@coinquer-capital.com">info@coinquer-capital.com</a></div>
   </footer>
+  <script>
+    const canvas = document.getElementById('background');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    const PARTICLE_COUNT = 80;
+    const particles = [];
+    const symbols = [
+      '$', '€', '¥', '£', '₿',
+      '∑', '∆', '∂', '±', '√', '∞', '≈', '∫'
+    ];
+    const SYMBOL_DISPLAY_TIME = 3000;
+    const SYMBOL_FADE_TIME = 1000;
+    const visibleSymbols = [];
+    function resize() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width * window.devicePixelRatio;
+      canvas.height = height * window.devicePixelRatio;
+      ctx.setTransform(1,0,0,1,0,0);
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    }
+    function initParticles() {
+      particles.length = 0;
+      for(let i=0;i<PARTICLE_COUNT;i++) {
+        particles.push({
+          x: Math.random()*width,
+          y: Math.random()*height,
+          vx: (Math.random()-0.5)*0.4,
+          vy: (Math.random()-0.5)*0.4,
+          radius: Math.random()*2+1
+        });
+      }
+    }
+    function updateParticles() {
+      for(let p of particles){
+        p.x+=p.vx;
+        p.y+=p.vy;
+        if(p.x<0)p.x=width;
+        if(p.x>width)p.x=0;
+        if(p.y<0)p.y=height;
+        if(p.y>height)p.y=0;
+      }
+    }
+    function drawConnections() {
+      for(let i=0;i<particles.length;i++){
+        for(let j=i+1;j<particles.length;j++){
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx*dx + dy*dy);
+          if(dist<120){
+            const alpha = 1 - dist/120;
+            ctx.strokeStyle = `rgba(0,0,0,${alpha*0.15})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x,particles[i].y);
+            ctx.lineTo(particles[j].x,particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+    function drawParticles() {
+      for(let p of particles){
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
+        ctx.fillStyle = 'rgba(0,0,0,0.2)';
+        ctx.fill();
+      }
+    }
+    function addSymbol() {
+      const char = symbols[Math.floor(Math.random()*symbols.length)];
+      const x = Math.random()*width*0.9 + width*0.05;
+      const y = Math.random()*height*0.9 + height*0.05;
+      const rotation = (Math.random()*60 - 30)*Math.PI/180;
+      visibleSymbols.push({char,x,y,startTime:performance.now(),rotation});
+    }
+    function drawSymbols(timestamp) {
+      const now = timestamp || performance.now();
+      for(let i=visibleSymbols.length-1;i>=0;i--){
+        const sym = visibleSymbols[i];
+        const elapsed = now - sym.startTime;
+        if(elapsed > SYMBOL_DISPLAY_TIME + SYMBOL_FADE_TIME) {
+          visibleSymbols.splice(i,1);
+          continue;
+        }
+        let alpha = 1;
+        if(elapsed < SYMBOL_FADE_TIME) alpha = elapsed/SYMBOL_FADE_TIME;
+        else if(elapsed > SYMBOL_DISPLAY_TIME) alpha = 1-(elapsed - SYMBOL_DISPLAY_TIME)/SYMBOL_FADE_TIME;
+        ctx.save();
+        ctx.translate(sym.x,sym.y);
+        ctx.rotate(sym.rotation);
+        ctx.font = `bold 24px 'Segoe UI Symbol', 'Arial Unicode MS', Arial, sans-serif`;
+        ctx.fillStyle = `rgba(0,0,0,${alpha*0.15})`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(sym.char,0,0);
+        ctx.restore();
+      }
+    }
+    function draw(timestamp) {
+      ctx.clearRect(0,0,width,height);
+      drawConnections();
+      drawParticles();
+      drawSymbols(timestamp);
+    }
+    function loop(timestamp){
+      updateParticles();
+      draw(timestamp);
+      requestAnimationFrame(loop);
+    }
+    let lastSymbolAddTime = 0;
+    function symbolSpawner(timestamp){
+      if(!lastSymbolAddTime)lastSymbolAddTime=timestamp;
+      if(timestamp - lastSymbolAddTime > 700){
+        addSymbol();
+        lastSymbolAddTime = timestamp;
+      }
+      requestAnimationFrame(symbolSpawner);
+    }
+    window.addEventListener('resize', ()=>{
+      resize();
+      initParticles();
+    });
+    resize();
+    initParticles();
+    loop();
+    requestAnimationFrame(symbolSpawner);
+  </script>
 </body>
 </html>
